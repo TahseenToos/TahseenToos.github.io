@@ -6,28 +6,6 @@
   <title>Game Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<script>
-const toggleBtn = document.getElementById('theme-toggle');
-const body = document.body;
-
-// Load saved theme on page load
-if (localStorage.getItem('theme') === 'light') {
-  body.classList.add('light-theme');
-  toggleBtn.textContent = '🌙 Dark Mode';
-} else {
-  toggleBtn.textContent = '☀️ Light Mode';
-}
-
-// Theme toggle handler
-toggleBtn.addEventListener('click', () => {
-  body.classList.toggle('light-theme');
-
-  const isLight = body.classList.contains('light-theme');
-  toggleBtn.textContent = isLight ? '🌙 Dark Mode' : '☀️ Light Mode';
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
-});
-
-</script>
 
 <style>
 /* === THEME VARIABLES === */
@@ -57,7 +35,7 @@ body.light-theme {
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   line-height: 1.6;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -186,7 +164,7 @@ footer {
   <section id="about" class="container">
     <h2>About Me</h2>
     <p>
-      I'm a passionate game developer in my second year at university, studying Computer Game Development with some experience using Unity and Unreal Engine. I enjoy diving into gameplay programming and I am looking to develop my skills in audio development.
+      I"m a passionate game developer in my second year at university, studying Computer Game Development with some experience using Unity and Unreal Engine. I enjoy diving into gameplay programming and I am looking to develop my skills in audio development.
     </p>
   </section>
 
@@ -233,6 +211,27 @@ footer {
     <p>&copy; 2025 Tahseen Khan. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js">
+      const toggleBtn = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      // Load saved theme on page load
+      if (localStorage.getItem("theme") === "light") {
+          body.classList.add("light-theme");
+          toggleBtn.textContent = "🌙 Dark Mode";
+      } else {
+          toggleBtn.textContent = "☀️ Light Mode";
+      }
+
+      // Theme toggle handler
+      toggleBtn.addEventListener("click", () => {
+          body.classList.toggle("light-theme");
+
+          const isLight = body.classList.contains("light-theme");
+          toggleBtn.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
+          localStorage.setItem("theme", isLight ? "light" : "dark");
+      });
+
+  </script>
 </body>
 </html>
