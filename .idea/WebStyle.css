@@ -1,0 +1,124 @@
+﻿:root {
+    --bg_colour: #e1e8e1;
+    --txt_colour: #111111;
+    --footer_bg: #a4b4a4;
+    --nav_bg: #989e98;
+    --secondary_colour: #829282;
+    --alt_text_colour: #eeeeee;
+    --alt_secondary_colour: #425242;
+}
+
+.light_mode {
+    --bg_colour: #e1e8e1;
+    --txt_colour: #111111;
+    --footer_bg: #a4b4a4;
+    --nav_bg: #989e98;
+    --secondary_colour: #829282;
+    --alt_text_colour: #eeeeee;
+    --alt_secondary_colour: #425242;
+}
+
+.dark_mode {
+    --bg_colour: #111711;
+    --txt_colour: #eeeeee;
+    --footer_bg: #283228;
+    --nav_bg: #1e241e;
+    --secondary_colour: #4a5a4a;
+    --alt_text_colour: #111111;
+    --alt_secondary_colour: #a4b4a4;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto;
+    line-height: 1.8;
+    background-color: var(--bg_colour);
+    color: var(--txt_colour);
+}
+
+.container {
+    width: 90%;
+    max_width: 1000px;
+    margin: auto;
+    padding: 10px 0px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header {
+    background-color: var(--footer_bg);
+    text-align: center;
+    padding: 60px 0px;
+}
+
+header h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--txt_colour);
+}
+
+header p {
+    font-size: 30px;
+    color: var(--txt_colour);
+}
+
+#theme_changer{
+    color: var(--txt_colour);
+    background-color: var(--secondary_colour);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.4s, 1s;
+    transform: initial;
+}
+
+#theme_changer:hover {
+    color: var(--alt_text_colour);
+    background-color: var(--alt_secondary_colour);
+}
+
+#nav_buttons{
+    color: var(--txt_colour);
+    background-color: var(--secondary_colour);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.4s, 1s;
+    transform: initial;
+    width: 24%;
+    max_width: 1000px;
+    margin: auto;
+    text-decoration: none;
+}
+
+ul.navigation{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: var(--secondary_colour);
+}
+
+ul.navigation li{
+    float: left;
+}
+
+
+#nav_buttons:hover{
+    color: var(--alt_text_colour);
+    background-color: var(--alt_secondary_colour);
+}
