@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Tahseen Khan"/>
+    <title>Tahseen Khan's Portfolio Home Page</title>
+    <script src="WebScripts.js"></script>
+    <link rel="stylesheet" href="WebStyle.css"/>
+</head>
+<nav>
+    <ul class="navigation">
+        <li>
+            <a href="Index.html" id="nav_buttons">Home</a>
+        </li>
+        <li>
+            <a href="Projects.html" id="nav_buttons">Projects ▾</a>
+            <ul>
+                <li id="dropdown_buttons">
+                    <a>The Smoke Show</a>
+                </li>
+                <li id="dropdown_buttons">
+                    <a>Turn-Based RPG</a>
+                </li>
+                <li id="dropdown_buttons">
+                    <a>Tank Game</a>
+                </li>
+                <li id="dropdown_buttons">
+                    <a>Text-Based game</a>
+                </li>
+                <li id="dropdown_buttons">
+                    <a>Intern Project</a>
+                </li>
+                <li id="dropdown_buttons">
+                    <a>Current Project</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="ContactMe.html" id="nav_buttons">Contact Me</a>
+        </li>
+        <li>
+            <button id="theme_changer" onclick="LightDarkToggle()">Dark Mode</button>
+        </li>
+    </ul>
+</nav>
+    <body>
+    
+        <header>
+            <div class="container">
+                <br></br>
+                <h1>Tahseen Khan</h1>
+                <p><b>Game Developer | Unreal Enthusiast</b></p>
+            </div>
+        </header>
+        
+        <section id="about_me" class="container">
+        <h2>ABOUT ME:</h2>
+        <p>Hey, my name is Tahseen. I'm a 2nd year game dev student at the University of Staffordshire who has mainly worked with blueprints and I am developing my skills in C++ for Unreal. I have worked with Unity (C#), done some 3D modeling using 3ds Max.</p>
+        <p>Interesting facts?</p>
+        <p>Anything that is personal yet professional</p>
+        </section>
+        
+        <section id="projects" class="container">
+            <projectPage> 
+                <h2>PROJECTS</h2>
+                <b></b>
+                <projectGrid>
+                    <projectCards>
+                        <img src="TheSmokeShow.png" alt="Project 1 Screenshot" />
+                        <h3>The Smoke Show</h3>
+                        <p>A food-orientated, first-person shooter built in Unreal Engine with a weapon system and an interesting AI.</p>
+                        <skillsList>
+                            <li>Unreal Engine (Blueprints)</li>
+                            <li>Gameplay Programming</li>
+                            <li>UI Programming</li>
+                            <li>Group Project</li>
+                        </skillsList>
+                    </projectCards>
+                    <projectCards>
+                        <img src="TheSmokeShow.png" alt="Project 1 Screenshot" />
+                        <h3>Turn-based RPG</h3>
+                        <p>A sci-fi action RPG built in Unity with custom AI systems and procedural levels.</p>
+                    </projectCards>
+                    <projectCards>
+                        <img src="TheSmokeShow.png" alt="Project 1 Screenshot" />
+                        <h3>Tank game</h3>
+                        <p>A sci-fi action RPG built in Unity with custom AI systems and procedural levels.</p>
+                    </projectCards>
+                    <projectCards>
+                        <img src="TheSmokeShow.png" alt="Project 1 Screenshot" />
+                        <h3>Text-based game</h3>
+                        <p>A sci-fi action RPG built in Unity with custom AI systems and procedural levels.</p>
+                    </projectCards>
+                    <projectCards>
+                        <img src="TheSmokeShow.png" alt="Project 1 Screenshot" />
+                        <h3>Intern project</h3>
+                        <p>A sci-fi action RPG built in Unity with custom AI systems and procedural levels.</p>
+                    </projectCards>
+                    <projectCards>
+                        <img src="TheSmokeShow.png" alt="Project 1 Screenshot" />
+                        <h3>Currently working on</h3>
+                        <p>A sci-fi action RPG built in Unity with custom AI systems and procedural levels.</p>
+                    </projectCards>
+                </projectGrid>
+            </projectPage>
+        </section>
+    </body>
+</html>

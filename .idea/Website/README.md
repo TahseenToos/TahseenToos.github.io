@@ -1,237 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Game Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Tahseen Khan"/>
+    <title>Tahseen Khan's Portfolio Home Page</title>
 
 <style>
-/* === THEME VARIABLES === */
+
 :root {
-  --bg-color: #121212;
-  --text-color: #f4f4f4;
-  --card-bg: #1f1f1f;
-  --highlight: #00d1ff;
-  --input-bg: #2e2e2e;
-  --footer-bg: #1e1e1e;
+    --bg_colour: #e1e8e1;
+    --txt_colour: #111111;
+    --footer_bg: #a4b4a4;
+    --nav_bg: #989e98;
+    --secondary_colour: #829282;
+    --alt_text_colour: #eeeeee;
+    --alt_secondary_colour: #425242;
 }
 
-body.light-theme {
-  --bg-color: #ffffff;
-  --text-color: #111111;
-  --card-bg: #f1f1f1;
-  --highlight: #0077cc;
-  --input-bg: #e9e9e9;
-  --footer-bg: #dddddd;
+.light_mode {
+    --bg_colour: #e1e8e1;
+    --txt_colour: #111111;
+    --footer_bg: #a4b4a4;
+    --nav_bg: #989e98;
+    --secondary_colour: #829282;
+    --alt_text_colour: #eeeeee;
+    --alt_secondary_colour: #425242;
 }
 
-/* === BASE STYLES === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.dark_mode {
+    --bg_colour: #111711;
+    --txt_colour: #eeeeee;
+    --footer_bg: #283228;
+    --nav_bg: #1e241e;
+    --secondary_colour: #4a5a4a;
+    --alt_text_colour: #111111;
+    --alt_secondary_colour: #a4b4a4;
 }
 
 body {
-  font-family: "Segoe UI", sans-serif;
-  line-height: 1.6;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+    font-family: 'Segoe UI', Roboto;
+    line-height: 1.8;
+    background-color: var(--bg_colour);
+    color: var(--txt_colour);
 }
 
 .container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 0;
+    width: 90%;
+    max_width: 1000px;
+    margin: auto;
+    padding: 10px 0px;
 }
 
 header {
-  background: var(--footer-bg);
-  text-align: center;
-  padding: 60px 0;
+    background-color: var(--footer_bg);
+    text-align: center;
+    padding: 60px 0px;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2rem;
-  color: var(--text-color);
+    font-size: 50px;
+    margin-bottom: 10px;
 }
 
 h2 {
-  color: var(--highlight);
-  margin-bottom: 20px;
+    color: var(--txt_colour);
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+header p {
+    font-size: 30px;
+    color: var(--txt_colour);
 }
 
-.project-card {
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: 8px;
-  transition: transform 0.2s;
+#theme_changer{
+    color: var(--txt_colour);
+    background-color: var(--secondary_colour);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.4s, 1s;
+    transform: initial;
 }
 
-.project-card:hover {
-  transform: scale(1.02);
+#theme_changer:hover {
+    color: var(--alt_text_colour);
+    background-color: var(--alt_secondary_colour);
 }
 
-.project-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
+#nav_buttons{
+    color: var(--txt_colour);
+    background-color: var(--secondary_colour);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.4s, 1s;
+    transform: initial;
+    width: 24%;
+    max_width: 1000px;
+    margin: auto;
+    text-decoration: none;
 }
 
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
+ul.navigation{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: var(--secondary_colour);
+    position: absolute;
 }
 
-.skills-list li {
-  background: var(--card-bg);
-  padding: 10px 15px;
-  border-radius: 5px;
+ul.navigation li{
+    float: left;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+
+#nav_buttons:hover{
+    color: var(--alt_text_colour);
+    background-color: var(--alt_secondary_colour);
 }
 
-form input, form textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background: var(--input-bg);
-  color: var(--text-color);
-}
-
-form button {
-  padding: 10px;
-  background: var(--highlight);
-  color: var(--bg-color);
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: var(--footer-bg);
-  font-size: 0.9rem;
-  color: var(--text-color);
-}
-
-/* === THEME TOGGLE BUTTON === */
-#theme-toggle {
-  margin-top: 20px;
-  padding: 8px 16px;
-  background: var(--highlight);
-  color: var(--bg-color);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s;
+#nav{
+    position:relative;
+    bottom:-15px;
+    right:42%;
+    display:inline-block;
 }
 
 </style>
+
+<script>
+
+function LightDarkToggle(){
+    
+    var element = document.body;
+    const lightDarkToggler = document.getElementById('theme_changer');
+    
+    element.classList.toggle('dark_mode');
+    console.log(lightDarkToggler);
+    
+    if(element.classList.contains('dark_mode')){
+    lightDarkToggler.textContent = 'Light Mode';
+    }
+    else {
+    lightDarkToggler.textContent = 'Dark Mode';
+    }
+}
+
+</script>
+
+</head>
+<div id="nav">
+<ul class="navigation">
+    <li>
+        <a href="Projects.html" id="nav_buttons">Home</a>
+    </li>
+    <li>
+        <a href="Projects.html" id="nav_buttons">Projects</a>
+    </li>
+    <li>
+        <a href="Projects.html" id="nav_buttons">About</a>
+    </li>
+    <li>
+        <a href="Projects.html" id="nav_buttons">Contact</a>
+    </li>
+</ul>
+</div>
 <body>
-  <header>
-    <div class="container">
-      <h1>Tahseen Khan</h1>
-      <p>Game Developer | Unreal Enthusiast</p>
-      <p>2nd Year Computer Game Developement Student at the University Of Staffordshire</p>
-      <button id="theme-toggle">🌙 Dark Mode</button>
+    <header>
+        <div class="container">
+            <button id="theme_changer" style="float:right" onclick="LightDarkToggle()">Dark Mode</button>
+            <br></br>
+            <h1>Tahseen Khan</h1>
+            <p>Game Developer | Unreal Enthusiast</p>
+        </div>
+    </header>
+    <div>
+        <h2>About:</h2>
+        <p>This will be where I will talk about my goals, interests, and anything else thats interesting about me</p>
     </div>
-  </header>
-
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <p>
-      I"m a passionate game developer in my second year at university, studying Computer Game Development with some experience using Unity and Unreal Engine. I enjoy diving into gameplay programming and I am looking to develop my skills in audio development.
-    </p>
-  </section>
-
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="project1.jpg" alt="Project 1 Screenshot" />
-        <h3>Project Nebula</h3>
-        <p>A sci-fi action RPG built in Unity with custom AI systems and procedural levels.</p>
-      </div>
-      <div class="project-card">
-        <img src="project2.jpg" alt="Project 2 Screenshot" />
-        <h3>Pixel Quest</h3>
-        <p>2D platformer made in Godot, featuring pixel art and dynamic enemy behavior.</p>
-      </div>
+<div>
+        <h2>About:</h2>
+        <p>This will be where I will talk about my goals, interests, and anything else thats interesting about me</p>
     </div>
-  </section>
-
-  <section id="skills" class="container">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Unity (C#)</li>
-      <li>Unreal Engine (Blueprint & C++)</li>
-      <li>Godot (GDScript)</li>
-      <li>Gameplay Programming</li>
-      <li>AI & Pathfinding</li>
-      <li>Multiplayer Networking</li>
-      <li>Level Design</li>
-    </ul>
-  </section>
-
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Tahseen Khan. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js">
-      const toggleBtn = document.getElementById("theme-toggle");
-      const body = document.body;
-
-      // Load saved theme on page load
-      if (localStorage.getItem("theme") === "light") {
-          body.classList.add("light-theme");
-          toggleBtn.textContent = "🌙 Dark Mode";
-      } else {
-          toggleBtn.textContent = "☀️ Light Mode";
-      }
-
-      // Theme toggle handler
-      toggleBtn.addEventListener("click", () => {
-          body.classList.toggle("light-theme");
-
-          const isLight = body.classList.contains("light-theme");
-          toggleBtn.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
-          localStorage.setItem("theme", isLight ? "light" : "dark");
-      });
-
-  </script>
+<div>
+        <h2>About:</h2>
+        <p>This will be where I will talk about my goals, interests, and anything else thats interesting about me</p>
+    </div>
+<div>
+        <h2>About:</h2>
+        <p>This will be where I will talk about my goals, interests, and anything else thats interesting about me</p>
+    </div>
+<div>
+        <h2>About:</h2>
+        <p>This will be where I will talk about my goals, interests, and anything else thats interesting about me</p>
+    </div>
+<div>
+        <h2>About:</h2>
+        <p>This will be where I will talk about my goals, interests, and anything else thats interesting about me</p>
+    </div>
+<div>
+        <h2>About:</h2>
+        <p>This will be where I will talk about my goals, interests, and anything else thats interesting about me</p>
+    </div>
+<div>
+        <h2>About:</h2>
+        <p>This will be where I will talk about my goals, interests, and anything else thats interesting about me</p>
+    </div>
+<div>
+        <h2>About:</h2>
+        <p>This will be where I will talk about my goals, interests, and anything else thats interesting about me</p>
+    </div>
 </body>
 </html>

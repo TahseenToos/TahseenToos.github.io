@@ -3,6 +3,7 @@
     --txt_colour: #111111;
     --footer_bg: #a4b4a4;
     --nav_bg: #989e98;
+    --card_bg: #c8d6c8;
     --secondary_colour: #829282;
     --alt_text_colour: #eeeeee;
     --alt_secondary_colour: #425242;
@@ -13,6 +14,7 @@
     --txt_colour: #111111;
     --footer_bg: #a4b4a4;
     --nav_bg: #989e98;
+    --card_bg: #c8d6c8;
     --secondary_colour: #829282;
     --alt_text_colour: #eeeeee;
     --alt_secondary_colour: #425242;
@@ -23,6 +25,7 @@
     --txt_colour: #eeeeee;
     --footer_bg: #283228;
     --nav_bg: #1e241e;
+    --card_bg: #384838;
     --secondary_colour: #4a5a4a;
     --alt_text_colour: #111111;
     --alt_secondary_colour: #a4b4a4;
@@ -44,23 +47,59 @@ body {
 
 nav {
     position: fixed;
+    display: flex;
+    background-color: var(--secondary_colour);
+    padding: 0 50px;
+    height: 73px;
     top: 0;
     width: 100%;
+    z-index: 10;
+    justify-content: space-between;
+}
+
+nav ul li ul{
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    position: relative;
+    left: -40px;
+    z-index: 1;
+    transition: all ease-in-out 0.1s;
+}
+
+
+nav ul li ul li a{
+    font-weight: bold;
+}
+
+#dropdown_buttons:hover {
+    background-color: var(--alt_secondary_colour);
+    color: var(--alt_text_colour);
+}
+
+nav ul li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background-color: var(--footer_bg);
     text-align: center;
-    padding: 60px 0px;
 }
 
 header h1 {
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 10px;
 }
 
 h2 {
-    color: var(--txt_colour);
+    color: var(--alt_secondary_colour);
+    font-size: 40px;
+    text-decoration: underline;
+    text-underline: var(--alt_secondary_colour);
+    text-align: center;
 }
 
 header p {
@@ -68,18 +107,72 @@ header p {
     color: var(--txt_colour);
 }
 
+p {
+    color: var(--txt_colour);
+    text-align: center;
+    font-size: 20px;
+}
+
+projectPage{
+    background-color: var(--alt_secondary_bg);
+    padding: 10px;
+}
+
+projectGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+}
+
+projectCards{
+    padding: 10px;
+    margin: auto;
+    background-color: var(--card_bg);
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+projectCards img{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+projectCards h3{
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+projectCards:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+skillsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    list-style-type: none;
+}
+
+skillsList li {
+    background-color: var(--secondary_colour);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
 #theme_changer{
     color: var(--txt_colour);
-    background-color: var(--secondary_colour);
-    border: none;
+    background-color: var(--footer_bg);
+    border: 1px solid var(--alt_text_colour);
     padding: 10px;
-    border-radius: 10px;
     text-align: center;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.4s, 1s;
-    transform: initial;
+    translate: 0px 8px;
+    margin-left: auto;
 }
 
 #theme_changer:hover {
@@ -91,26 +184,41 @@ header p {
     color: var(--txt_colour);
     background-color: var(--secondary_colour);
     border: none;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 18px 70px;
     text-align: center;
-    font-size: 20px;
+    font-size: 35px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.4s, 1s;
     transform: initial;
-    width: 24%;
+    width: 100%;
     max_width: 1000px;
     margin: auto;
     text-decoration: none;
+    shape-rendering: crispEdges;
+}
+
+#dropdown_buttons {
+    color: var(--txt_colour);
+    background-color: var(--secondary_colour);
+    border: none;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    shape-rendering: crispEdges;
+    display: block;
 }
 
 ul.navigation{
     list-style-type: none;
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
+    overflow: initial;
     background-color: var(--secondary_colour);
+    position: relative;
+    z-index: 1;
 }
 
 ul.navigation li{
