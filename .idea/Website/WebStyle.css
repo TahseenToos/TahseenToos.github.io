@@ -9,6 +9,10 @@
     --alt_secondary_colour: #425242;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .light_mode {
     --bg_colour: #e1e8e1;
     --txt_colour: #111111;
@@ -29,6 +33,17 @@
     --secondary_colour: #4a5a4a;
     --alt_text_colour: #111111;
     --alt_secondary_colour: #a4b4a4;
+}
+
+a {
+    text-decoration: none;
+}
+ 
+#dropdown_buttons a{
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    color: inherit;
 }
 
 body {
@@ -206,6 +221,7 @@ skillsList li {
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
+    width: 100%;
     text-decoration: none;
     shape-rendering: crispEdges;
     display: block;
@@ -229,4 +245,45 @@ ul.navigation li{
 #nav_buttons:hover{
     color: var(--alt_text_colour);
     background-color: var(--alt_secondary_colour);
+}
+
+.video-container{
+    position: relative;
+    padding-bottom: 45.25%;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 75%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+body.dark-mode .video-container {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.information-block {
+    display: block;
+    text-align: center;
+}
+
+.information-block p {
+    padding-left: 4%;
+    padding-right: 4%;
 }
