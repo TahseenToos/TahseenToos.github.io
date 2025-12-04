@@ -8,42 +8,16 @@
     <script src="WebScripts.js"></script>
     <link rel="stylesheet" href="WebStyle.css"/>
 </head>
-<nav>
-    <ul class="navigation">
-        <li>
-            <a href="index.html" id="nav_buttons">Home</a>
-        </li>
-        <li>
-            <a href="Projects.html" id="nav_buttons">Projects ▾</a>
-            <ul>
-                <li id="dropdown_buttons">
-                    <a>The Smoke Show</a>
-                </li>
-                <li id="dropdown_buttons">
-                    <a>Turn-Based RPG</a>
-                </li>
-                <li id="dropdown_buttons">
-                    <a>Tank Game</a>
-                </li>
-                <li id="dropdown_buttons">
-                    <a>Text-Based game</a>
-                </li>
-                <li id="dropdown_buttons">
-                    <a>Intern Project</a>
-                </li>
-                <li id="dropdown_buttons">
-                    <a>Current Project</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="ContactMe.html" id="nav_buttons">Contact Me</a>
-        </li>
-        <li>
-            <button id="theme_changer" onclick="LightDarkToggle()">Dark Mode</button>
-        </li>
-    </ul>
-</nav>
+<div id="NavBar-placeholder"></div>
+
+<script>
+    fetch('NavBar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('NavBar-placeholder').innerHTML = data;
+        });
+</script>
+
     <body>
         <header>
             <div class="container">

@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45688c08-fbe2-4c6b-b1fc-24d769208cef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ContactMe.html" beforeDir="false" afterPath="$PROJECT_DIR$/ContactMe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NavBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/NavBar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TheSmokeShow.html" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmokeShow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +33,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.index.html.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -60,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1764881232071</updated>
-      <workItem from="1764881234238" duration="2322000" />
+      <workItem from="1764881234238" duration="4633000" />
     </task>
     <servers />
   </component>
