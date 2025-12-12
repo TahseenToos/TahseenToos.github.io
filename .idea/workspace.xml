@@ -10,6 +10,8 @@
       <change beforePath="$PROJECT_DIR$/NavBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/NavBar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projects.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TheSmokeShow.html" beforeDir="false" afterPath="$PROJECT_DIR$/TheSmokeShow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebScripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebScripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +22,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="36OcoFCLEURoZOJ9DXY0HtjzKsj" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -31,21 +33,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.index.html.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "TransferMainSite",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;TransferMainSite&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TahseenToos.github.io/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -64,6 +66,8 @@
       <option name="presentableId" value="Default" />
       <updated>1764881232071</updated>
       <workItem from="1764881234238" duration="4633000" />
+      <workItem from="1765279375126" duration="593000" />
+      <workItem from="1765476718031" duration="12859000" />
     </task>
     <servers />
   </component>

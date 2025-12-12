@@ -11,21 +11,13 @@
 <div id="NavBar-placeholder"></div>
 
 <script>
-    fetch('NavBar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('NavBar-placeholder').innerHTML = data;
-            
-            const activePage = window.location.pathname.split('/').pop() || "index.html";
-            
-            <!--Finish page detector-->
-        });
+    getNavBar();
 </script>
 
     <body>
     
         <header>
-            <div class="container">
+            <div class="identifier">
                 <br></br>
                 <h1>Tahseen Khan</h1>
                 <p><b>Game Developer | Unreal Enthusiast</b></p>
@@ -34,9 +26,8 @@
         
         <section id="about_me" class="container">
         <h2>ABOUT ME:</h2>
-        <p>Hey, my name is Tahseen. I'm a 2nd year game dev student at the University of Staffordshire who has mainly worked with blueprints and I am developing my skills in C++ for Unreal. I have worked with Unity (C#), done some 3D modeling using 3ds Max.</p>
-        <p>Interesting facts?</p>
-        <p>Anything that is personal yet professional</p>
+        <p>Hey, my name is Tahseen. I'm a 2nd year game dev student at the University of Staffordshire who has mainly worked with blueprints and I am developing my skills in C++ for Unreal. I have worked with Unity (C#), done some 3D modeling using 3ds Max, and have explored VFX.</p>
+        <p>I play guitar, am a part of my University's Mountaineering Club and Badminton Club. I like to draw in my free time and just generally love making things.</p>
         </section>
         
         <section id="projects" class="container">

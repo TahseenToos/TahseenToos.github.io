@@ -51,20 +51,33 @@ body {
     line-height: 1.8;
     background-color: var(--bg_colour);
     color: var(--txt_colour);
+    margin-left: 0;
 }
 
 .container {
-    width: 90%;
+    width: 75%;
     max_width: 1000px;
     margin: auto;
     padding: 10px 0px;
+}
+
+.identifier {
+    width: 100%;
+    padding: 0px 0px 80px;
+}
+
+.identifier h1 {
+    font-size: 100px;
+}
+
+.identifier b {
+    font-size: 50px;
 }
 
 nav {
     position: fixed;
     display: flex;
     background-color: var(--secondary_colour);
-    padding: 0 50px;
     height: 73px;
     top: 0;
     width: 100%;
@@ -125,7 +138,7 @@ header p {
 p {
     color: var(--txt_colour);
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 projectPage{
@@ -182,12 +195,13 @@ skillsList li {
     border: 1px solid var(--alt_text_colour);
     padding: 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.4s, 1s;
     translate: 0px 8px;
     margin-left: auto;
+    margin-right: auto;
 }
 
 #theme_changer:hover {
@@ -206,7 +220,6 @@ skillsList li {
     cursor: pointer;
     transform: initial;
     width: 100%;
-    max_width: 1000px;
     margin: auto;
     text-decoration: none;
     shape-rendering: crispEdges;
@@ -235,6 +248,7 @@ ul.navigation{
     background-color: var(--secondary_colour);
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 
 ul.navigation li{
