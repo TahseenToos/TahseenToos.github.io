@@ -40,6 +40,16 @@ function getNavBar() {
         .then(data => {
             document.getElementById('NavBar-placeholder').innerHTML = data;
 
+            var element = document.body;
+            const lightDarkToggler = document.getElementById('theme_changer');
+            
+            if(element.classList.contains('dark_mode')){
+                lightDarkToggler.textContent = 'Light Mode';
+            }
+            else {
+                lightDarkToggler.textContent = 'Dark Mode';
+            }
+            
             const activePage = window.location.pathname.split('/').pop() || "index.html";
 
             <!--Finish page detector-->

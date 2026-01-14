@@ -52,6 +52,8 @@ body {
     background-color: var(--bg_colour);
     color: var(--txt_colour);
     margin-left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .container {
@@ -63,7 +65,7 @@ body {
 
 .identifier {
     width: 100%;
-    padding: 0px 0px 80px;
+    padding: 50px 0px 80px 0px;
 }
 
 .identifier h1 {
@@ -124,7 +126,23 @@ header h1 {
 
 h2 {
     color: var(--alt_secondary_colour);
-    font-size: 40px;
+    font-size: 50px;
+    text-decoration: underline;
+    text-underline: var(--alt_secondary_colour);
+    text-align: center;
+}
+
+h3 {
+    color: var(--alt_secondary_colour);
+    font-size: 35px;
+    text-decoration: underline;
+    text-underline: var(--alt_secondary_colour);
+    text-align: center;
+}
+
+h4 {
+    color: var(--alt_secondary_colour);
+    font-size: 30px;
     text-decoration: underline;
     text-underline: var(--alt_secondary_colour);
     text-align: center;
@@ -195,7 +213,7 @@ skillsList li {
     border: 1px solid var(--alt_text_colour);
     padding: 10px;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.4s, 1s;
@@ -213,9 +231,9 @@ skillsList li {
     color: var(--txt_colour);
     background-color: var(--secondary_colour);
     border: none;
-    padding: 18px 70px;
+    padding: 18px 40px;
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     cursor: pointer;
     transform: initial;
@@ -223,6 +241,7 @@ skillsList li {
     margin: auto;
     text-decoration: none;
     shape-rendering: crispEdges;
+    
 }
 
 #dropdown_buttons {
@@ -231,7 +250,7 @@ skillsList li {
     border: none;
     padding: 0 10px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     width: 100%;
@@ -300,4 +319,10 @@ body.dark-mode .video-container {
 .information-block p {
     padding-left: 4%;
     padding-right: 4%;
+}
+
+@media screen and (max-width: 740px){
+    .NavBar {
+        display: none;
+    }
 }
