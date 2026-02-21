@@ -5,6 +5,7 @@
     --nav_bg: #989e98;
     --card_bg: #c8d6c8;
     --secondary_colour: #829282;
+    --secondary_colour_button: #90a290;
     --alt_text_colour: #eeeeee;
     --alt_secondary_colour: #425242;
 }
@@ -20,6 +21,7 @@ html {
     --nav_bg: #989e98;
     --card_bg: #c8d6c8;
     --secondary_colour: #829282;
+    --secondary_colour_button: #90a290;
     --alt_text_colour: #eeeeee;
     --alt_secondary_colour: #425242;
 }
@@ -31,6 +33,7 @@ html {
     --nav_bg: #1e241e;
     --card_bg: #384838;
     --secondary_colour: #4a5a4a;
+    --secondary_colour_button: #3a4a3a;
     --alt_text_colour: #111111;
     --alt_secondary_colour: #a4b4a4;
 }
@@ -51,20 +54,35 @@ body {
     line-height: 1.8;
     background-color: var(--bg_colour);
     color: var(--txt_colour);
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .container {
-    width: 90%;
+    width: 75%;
     max_width: 1000px;
     margin: auto;
     padding: 10px 0px;
 }
 
-nav {
+.identifier {
+    width: 100%;
+    padding: 50px 0px 80px 0px;
+}
+
+.identifier h1 {
+    font-size: 100px;
+}
+
+.identifier b {
+    font-size: 50px;
+}
+
+.Desktop {
     position: fixed;
     display: flex;
     background-color: var(--secondary_colour);
-    padding: 0 50px;
     height: 73px;
     top: 0;
     width: 100%;
@@ -72,7 +90,7 @@ nav {
     justify-content: space-between;
 }
 
-nav ul li ul{
+.Desktop ul li ul{
     visibility: hidden;
     opacity: 0;
     display: none;
@@ -83,20 +101,57 @@ nav ul li ul{
 }
 
 
-nav ul li ul li a{
+.Desktop ul li ul li a{
     font-weight: bold;
+}
+
+.Desktop ul li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.Mobile {
+    position: fixed;
+    display: none;
+    background-color: var(--secondary_colour);
+    height: 73px;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    justify-content: space-between;
+    left: 0;
+}
+
+.Mobile ul li ul{
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    transition: all ease-in-out 0.1s;
+}
+
+
+.Mobile ul li ul li a{
+    font-weight: bold;
+    width: 100%;
+}
+
+.Mobile ul li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
 }
 
 #dropdown_buttons:hover {
     background-color: var(--alt_secondary_colour);
     color: var(--alt_text_colour);
-}
-
-nav ul li:hover>ul {
-    visibility: visible;
-    opacity: 1;
-    display: flex;
-    flex-direction: column;
 }
 
 header {
@@ -111,7 +166,23 @@ header h1 {
 
 h2 {
     color: var(--alt_secondary_colour);
-    font-size: 40px;
+    font-size: 50px;
+    text-decoration: underline;
+    text-underline: var(--alt_secondary_colour);
+    text-align: center;
+}
+
+h3 {
+    color: var(--alt_secondary_colour);
+    font-size: 35px;
+    text-decoration: underline;
+    text-underline: var(--alt_secondary_colour);
+    text-align: center;
+}
+
+h4 {
+    color: var(--alt_secondary_colour);
+    font-size: 30px;
     text-decoration: underline;
     text-underline: var(--alt_secondary_colour);
     text-align: center;
@@ -125,11 +196,10 @@ header p {
 p {
     color: var(--txt_colour);
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 projectPage{
-    background-color: var(--alt_secondary_bg);
     padding: 10px;
 }
 
@@ -159,7 +229,7 @@ projectCards h3{
 }
 
 projectCards:hover{
-    transform: scale(1.1);
+    transform: scale(1.04);
     cursor: pointer;
 }
 
@@ -174,6 +244,13 @@ skillsList li {
     background-color: var(--secondary_colour);
     padding: 10px 15px;
     border-radius: 10px;
+    text-decoration: none;
+}
+
+skillsList li p {
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #theme_changer{
@@ -188,6 +265,7 @@ skillsList li {
     transition: background 0.4s, 1s;
     translate: 0px 8px;
     margin-left: auto;
+    margin-right: auto;
 }
 
 #theme_changer:hover {
@@ -199,17 +277,48 @@ skillsList li {
     color: var(--txt_colour);
     background-color: var(--secondary_colour);
     border: none;
-    padding: 18px 70px;
+    padding: 18px 40px;
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     cursor: pointer;
     transform: initial;
     width: 100%;
-    max_width: 1000px;
     margin: auto;
     text-decoration: none;
     shape-rendering: crispEdges;
+}
+
+#nav_mobile_buttons{
+    color: var(--txt_colour);
+    background-color: var(--secondary_colour);
+    border: none;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transform: initial;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    shape-rendering: crispEdges;
+}
+
+#nav_mobile_project_buttons{
+    list-style-type: none;
+    color: var(--txt_colour);
+    background-color: var(--secondary_colour_button);
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transform: initial;
+    width: 95%;
+    display: block;
+    text-decoration: none;
+    shape-rendering: crispEdges;
+    margin: 0px 15px;
 }
 
 #dropdown_buttons {
@@ -218,7 +327,7 @@ skillsList li {
     border: none;
     padding: 0 10px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     width: 100%;
@@ -235,14 +344,45 @@ ul.navigation{
     background-color: var(--secondary_colour);
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 
 ul.navigation li{
     float: left;
 }
 
+ul.navigation-Alt{
+    list-style-type: none;
+    overflow: initial;
+    background-color: var(--secondary_colour);
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul.navigation-Alt li{
+    align-self: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    float: none;
+}
+
 
 #nav_buttons:hover{
+    color: var(--alt_text_colour);
+    background-color: var(--alt_secondary_colour);
+}
+
+#nav_mobile_buttons:hover{
+    color: var(--alt_text_colour);
+    background-color: var(--alt_secondary_colour);
+}
+
+#nav_mobile_project_buttons:hover{
     color: var(--alt_text_colour);
     background-color: var(--alt_secondary_colour);
 }
@@ -286,4 +426,13 @@ body.dark-mode .video-container {
 .information-block p {
     padding-left: 4%;
     padding-right: 4%;
+}
+
+@media screen and (max-width: 740px){
+    #NavBar-Desktop {
+        display: none;
+    }
+    #NavBar-Mobile {
+        display: block;
+    }
 }
