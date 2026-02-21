@@ -200,7 +200,6 @@ p {
 }
 
 projectPage{
-    background-color: var(--alt_secondary_colour);
     padding: 10px;
 }
 
@@ -230,7 +229,7 @@ projectCards h3{
 }
 
 projectCards:hover{
-    transform: scale(1.1);
+    transform: scale(1.04);
     cursor: pointer;
 }
 
@@ -245,6 +244,13 @@ skillsList li {
     background-color: var(--secondary_colour);
     padding: 10px 15px;
     border-radius: 10px;
+    text-decoration: none;
+}
+
+skillsList li p {
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #theme_changer{
