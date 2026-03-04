@@ -1,5 +1,6 @@
 ﻿:root {
     --bg_colour: #e1e8e1;
+    --alt_bg_colour: rgba(164, 180, 164, 0.3);
     --txt_colour: #111111;
     --footer_bg: #a4b4a4;
     --nav_bg: #989e98;
@@ -16,6 +17,7 @@ html {
 
 .light_mode {
     --bg_colour: #e1e8e1;
+    --alt_bg_colour: rgba(164, 180, 164, 0.3);
     --txt_colour: #111111;
     --footer_bg: #a4b4a4;
     --nav_bg: #989e98;
@@ -28,6 +30,7 @@ html {
 
 .dark_mode {
     --bg_colour: #111711;
+    --alt_bg_colour: rgba(40, 50, 40, 0.3);
     --txt_colour: #eeeeee;
     --footer_bg: #283228;
     --nav_bg: #1e241e;
@@ -419,8 +422,10 @@ body.dark-mode .video-container {
 }
 
 .information-block {
-    display: block;
+    alignment-baseline: center;
     text-align: center;
+    background-color: var(--alt_bg_colour);
+    margin: 80px;
 }
 
 .information-block p {
